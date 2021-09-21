@@ -120,7 +120,7 @@ void an_arkhi(p_t *ο, long α, long ρ, p_t *σ) { printf("an\n"); }
 void da_arkhi(p_t *ο, long α, long ρ, p_t *σ) { printf("da\n"); }
 void ara_arkhi(p_t *ο, long α, long ρ, p_t *σ) { printf("ara\n"); }
 int main() {
-  p_t *ο = malloc(1 << 13), *σ = &ο[(1 << 13)];
+  p_t *ο = malloc((1 << 12) * sizeof(void *)), *σ = &ο[(1 << 12)];
   long α = 0, ρ = 0;
   σ[--ρ].c = ara_arkhi;
   σ[--ρ].c = da_arkhi;
